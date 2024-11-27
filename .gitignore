@@ -1,0 +1,9 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin
+/.vs/ComedorAPI
+/ComedorAPI/.vs/ComedorAPI
+/ComedorAPI/bin/Debug/net8.0
