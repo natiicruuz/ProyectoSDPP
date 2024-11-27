@@ -1,0 +1,6 @@
+@ComedorAPI_HostAddress = http://localhost:5033
+
+GET {{ComedorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
