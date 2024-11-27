@@ -25,6 +25,7 @@ namespace ComedorAPI.Controllers
         [HttpGet]
         public async Task<IEnumerable<Reservation>> Get()
         {
+
             return await _reservations.Find(FilterDefinition<Reservation>.Empty).ToListAsync(); 
         }
 

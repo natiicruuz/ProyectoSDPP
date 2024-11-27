@@ -18,5 +18,6 @@ namespace ComedorAPI.Data
         }
 
         public IMongoDatabase? Database => _database;
+
     }
 }

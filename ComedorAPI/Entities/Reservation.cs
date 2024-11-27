@@ -20,5 +20,6 @@ namespace ComedorAPI.Entities
 
         [BsonElement("comida")]
         public string Comida { get; set; }
+
     }
 }

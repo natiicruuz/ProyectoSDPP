@@ -1,5 +1,3 @@
-
-
 using ComedorAPI.Data;
 
 namespace ComedorAPI

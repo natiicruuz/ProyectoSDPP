@@ -39,3 +39,4 @@ C:\Users\Natalia\source\repos\ProyectoSDPP\ComedorAPI\obj\Debug\net8.0\refint\Co
 C:\Users\Natalia\source\repos\ProyectoSDPP\ComedorAPI\obj\Debug\net8.0\ComedorAPI.pdb
 C:\Users\Natalia\Source\Repos\ProyectoSDPP\ComedorAPI\obj\Debug\net8.0\ComedorAPI.genruntimeconfig.cache
 C:\Users\Natalia\Source\Repos\ProyectoSDPP\ComedorAPI\obj\Debug\net8.0\ref\ComedorAPI.dll
+C:\Users\Natalia\source\repos\ProyectoSDPP\ComedorAPI\obj\Debug\net8.0\ComedorAPI.sourcelink.json
