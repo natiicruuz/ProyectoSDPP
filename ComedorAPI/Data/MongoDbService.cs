@@ -10,11 +10,18 @@ namespace ComedorAPI.Data
 
         public MongoDbService(IConfiguration configuration)
         {
-            _configuration = configuration;
-            var connectionString = _configuration.GetConnectionString("DbConnection");
-            var mongoUrl = MongoUrl.Create(connectionString);
-            var mongoClient = new MongoClient(mongoUrl);
-            _database = mongoClient.GetDatabase(mongoUrl.DatabaseName);
+            try
+            {
+                _configuration = configuration;
+                var connectionString = _configuration.GetConnectionString("DbConnection");
+                var mongoUrl = MongoUrl.Create(connectionString);
+                var mongoClient = new MongoClient(mongoUrl);
+                _database = mongoClient.GetDatabase(mongoUrl.DatabaseName);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"Error conectando a la base de datos: {ex.Message}");
+            }
         }
 
         public IMongoDatabase? Database => _database;

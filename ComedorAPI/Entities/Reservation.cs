@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
 
 namespace ComedorAPI.Entities
 {
@@ -7,11 +8,13 @@ namespace ComedorAPI.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } 
+        public string Id { get; set; }
 
+        [Required]
         [BsonElement("menu")]
-        public string MenuId { get; set; } 
+        public string MenuId { get; set; }
 
+        [Required]
         [BsonElement("fechaReserva")]
         public DateTime FechaReserva { get; set; }
 

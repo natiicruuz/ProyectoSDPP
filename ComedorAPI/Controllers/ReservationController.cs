@@ -25,7 +25,6 @@ namespace ComedorAPI.Controllers
         [HttpGet]
         public async Task<IEnumerable<Reservation>> Get()
         {
-
             return await _reservations.Find(FilterDefinition<Reservation>.Empty).ToListAsync(); 
         }
 
@@ -34,7 +33,7 @@ namespace ComedorAPI.Controllers
         public async Task<ActionResult<Reservation?>> GetById(string id)
         {
             var filter = Builders<Reservation>.Filter.Eq(x => x.Id, id);
-            var reservation = _reservations.Find(filter).FirstOrDefault();  
+            var reservation = await _reservations.Find(filter).FirstOrDefaultAsync();
             return reservation is not null ? Ok(reservation) : NotFound();
         }
 
@@ -42,11 +41,15 @@ namespace ComedorAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(Reservation reservation)
         {
-            await _reservations.InsertOneAsync(reservation);    
-            return CreatedAtAction(nameof(GetById), new { 
-                id = reservation.Id,
-                reservation
-            });   
+            try
+            {
+                await _reservations.InsertOneAsync(reservation);
+                return CreatedAtAction(nameof(GetById), new { id = reservation.Id }, reservation);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al crear la reserva: {ex.Message}");
+            }
         }
 
         // PUT api/<ReservationController>/5
