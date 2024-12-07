@@ -8,8 +8,9 @@ using ComedorAPI.Entities;
 
 namespace ComedorAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
+
     public class ReservationController : ControllerBase
     {
 
@@ -43,6 +44,9 @@ namespace ComedorAPI.Controllers
         {
             try
             {
+                // Garantizar que el Id sea nulo para que MongoDB lo genere automáticamente
+                reservation.Id = null;
+
                 await _reservations.InsertOneAsync(reservation);
                 return CreatedAtAction(nameof(GetById), new { id = reservation.Id }, reservation);
             }
@@ -51,6 +55,7 @@ namespace ComedorAPI.Controllers
                 return StatusCode(500, $"Error al crear la reserva: {ex.Message}");
             }
         }
+
 
         // PUT api/<ReservationController>/5
         [HttpPut("{id}")]

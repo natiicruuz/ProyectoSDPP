@@ -16,6 +16,18 @@ namespace ComedorAPI
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<MongoDbService>();
 
+
+            // Habilitar CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,13 +37,11 @@ namespace ComedorAPI
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("AllowAllOrigins");
+
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
