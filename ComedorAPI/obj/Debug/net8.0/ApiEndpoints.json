@@ -17,6 +17,26 @@
   },
   {
     "ContainingType": "ComedorAPI.Controllers.MenuController",
+    "Method": "GetAll",
+    "RelativePath": "api/Menu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ComedorAPI.Entities.Menu, ComedorAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComedorAPI.Controllers.MenuController",
     "Method": "GetById",
     "RelativePath": "api/Menu/{id}",
     "HttpMethod": "GET",
@@ -40,6 +60,43 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ComedorAPI.Controllers.MenuController",
+    "Method": "Update",
+    "RelativePath": "api/Menu/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedMenu",
+        "Type": "ComedorAPI.Entities.Menu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComedorAPI.Controllers.MenuController",
+    "Method": "Delete",
+    "RelativePath": "api/Menu/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ComedorAPI.Controllers.ReservationController",
@@ -112,13 +169,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "reservation",
-        "Type": "ComedorAPI.Entities.Reservation",
+        "Name": "id",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "id",
-        "Type": "",
+        "Name": "updatedReservation",
+        "Type": "ComedorAPI.Entities.Reservation",
         "IsRequired": true
       }
     ],

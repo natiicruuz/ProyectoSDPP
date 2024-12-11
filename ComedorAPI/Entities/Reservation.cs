@@ -11,6 +11,7 @@ namespace ComedorAPI.Entities
         public string? Id { get; set; }
 
         [Required]
+        [BsonRepresentation(BsonType.ObjectId)]
         [BsonElement("menu")]
         public string MenuId { get; set; }
 
@@ -19,10 +20,7 @@ namespace ComedorAPI.Entities
         public DateTime FechaReserva { get; set; }
 
         [BsonElement("estadoReserva")]
-        public bool EstadoReserva { get; set; } 
-
-        [BsonElement("comida")]
-        public string Comida { get; set; }
+        public bool EstadoReserva { get; set; }
 
     }
 }

@@ -15,11 +15,13 @@ namespace ComedorAPI.Controllers
     {
 
         private readonly IMongoCollection<Reservation> _reservations;
+        private readonly IMongoCollection<Menu> _menus; // Colección de menús para validar el ID del menú.
+
 
         public ReservationController(MongoDbService mongoDbService)
         {
             _reservations = mongoDbService.Database?.GetCollection<Reservation>("reservation");
-
+            _menus = mongoDbService.Database?.GetCollection<Menu>("menu");
 
         }
         // GET: api/<ReservationController>
@@ -44,7 +46,7 @@ namespace ComedorAPI.Controllers
         {
             try
             {
-                // Garantizar que el Id sea nulo para que MongoDB lo genere automáticamente
+                // Garantizar que el ID sea nulo para que MongoDB lo genere automáticamente
                 reservation.Id = null;
 
                 await _reservations.InsertOneAsync(reservation);
@@ -59,11 +61,24 @@ namespace ComedorAPI.Controllers
 
         // PUT api/<ReservationController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Update(Reservation reservation)
+        public async Task<ActionResult> Update(string id, Reservation updatedReservation)
         {
-            var filter = Builders<Reservation>.Filter.Eq(x => x.Id, reservation.Id);
-            await _reservations.ReplaceOneAsync(filter, reservation);
-            return Ok();
+            try
+            {
+                var filter = Builders<Reservation>.Filter.Eq(r => r.Id, id);
+                var result = await _reservations.ReplaceOneAsync(filter, updatedReservation);
+
+                if (result.MatchedCount == 0)
+                {
+                    return NotFound($"No se encontró la reserva con ID: {id}");
+                }
+
+                return Ok("Reserva actualizada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al actualizar la reserva: {ex.Message}");
+            }
         }
 
         // DELETE api/<ReservationController>/5
@@ -71,7 +86,11 @@ namespace ComedorAPI.Controllers
         public async Task<ActionResult> Delete(string id)
         {
             var filter = Builders<Reservation>.Filter.Eq(x => x.Id, id);
-            await _reservations.DeleteOneAsync(filter);
+            var result = await _reservations.DeleteOneAsync(filter);
+            if (result.DeletedCount == 0)
+            {
+                return NotFound($"No se encontró la reserva con ID: {id}");
+            }
             return Ok();
         }
     }
