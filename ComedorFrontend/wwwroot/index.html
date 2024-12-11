@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="reservationsAndMenuContainer">
+        <h2>Bienvenido al Dashboard</h2>
+        <hr>
+
+        <div class="dashboard-content">
+            <!-- Contenedor para las reservas y el formulario -->
+            <div class="reservations-section">
+                <h3>Tus Reservas</h3>
+                <!-- Tabla para mostrar las reservas -->
+                <table id="reservationsTable">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Menú</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las reservas se llenarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="create-form">
+                <h3>Crear una Nueva Reserva</h3>
+                <form id="reservationForm">
+                    <!-- Campo para seleccionar el menú -->
+                    <label for="menu">Selecciona un menú:</label>
+                    <select id="menu" name="menu"></select>
+
+                    <!-- Campo para la fecha -->
+                    <label for="date">Fecha:</label>
+                    <input type="date" id="date" name="date" required />
+
+                    <!-- Campo para la hora -->
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required />
+
+                    <!-- Campo para el estado de la reserva -->
+                    <label for="status">Estado:</label>
+                    <select id="status" name="status">
+                        <option value="true">Confirmada</option>
+                        <option value="false">Pendiente</option>
+                    </select>
+
+                    <!-- Botón para enviar -->
+                    <button type="submit">Crear Reserva</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
