@@ -65,6 +65,7 @@ namespace ComedorAPI.Controllers
         {
             try
             {
+ 
                 var filter = Builders<Reservation>.Filter.Eq(r => r.Id, id);
                 var result = await _reservations.ReplaceOneAsync(filter, updatedReservation);
 
