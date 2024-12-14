@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hw3/xJMXI//gFyiZ38kao9L7pSKKH2tLS+4RKx8efcQ=",
+  "Hash": "92M5XzlQpycs3Sp8jx+742BTXiFj+o/gu9EmyJq7gCk=",
   "Source": "ComedorFrontend",
   "BasePath": "_content/ComedorFrontend",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ComedorFrontend\\wwwroot",
       "Source": "ComedorFrontend",
-      "ContentRoot": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
       "BasePath": "_content/ComedorFrontend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\css\\styles.css",
+      "Identity": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\css\\styles.css",
       "SourceId": "ComedorFrontend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
       "BasePath": "_content/ComedorFrontend",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\index.html",
       "SourceId": "ComedorFrontend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
       "BasePath": "_content/ComedorFrontend",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\js\\app.js",
+      "Identity": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\js\\app.js",
       "SourceId": "ComedorFrontend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\sergi\\OneDrive\\Escritorio\\ProyectoSistemasD\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\",
       "BasePath": "_content/ComedorFrontend",
       "RelativePath": "js/app.js",
       "AssetKind": "All",
