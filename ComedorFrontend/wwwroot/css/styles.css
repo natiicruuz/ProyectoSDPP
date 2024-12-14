@@ -114,6 +114,10 @@ button {
         cursor: not-allowed;
     }
 
+.delete-btn {
+    background-color: #ff6961 !important;
+}
+
 /* Tables */
 table {
     width: 100%;
