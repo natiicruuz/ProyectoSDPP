@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj": {}
+    "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj": {
+    "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
         "projectName": "ComedorAPI",
-        "projectPath": "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
+        "projectPath": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
         "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\obj\\",
         "projectStyle": "PackageReference",

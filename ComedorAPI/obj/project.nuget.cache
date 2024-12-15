@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SrM6UkMKYpo=",
+  "dgSpecHash": "yg9xJafeIlM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Natalia\\Source\\Repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
+  "projectFilePath": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorAPI\\ComedorAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Natalia\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Natalia\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

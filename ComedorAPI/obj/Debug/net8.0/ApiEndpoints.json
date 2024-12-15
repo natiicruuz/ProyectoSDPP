@@ -150,7 +150,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Reservation",
+        "Type": "ComedorAPI.Entities.ReservationDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
