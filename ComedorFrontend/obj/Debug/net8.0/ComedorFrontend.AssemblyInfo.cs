@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComedorFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef24f88edcba568184983d368f977824050ac806")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+250b4ea440634bfeaeddc9ef61fad13a7d628837")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComedorFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComedorFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
