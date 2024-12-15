@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.0.1">
+    <script src="https://kit.fontawesome.com/330de1cbea.js" crossorigin="anonymous"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reservationsAndMenuContainer">
+        <h2>Navidad a la Carta</h2>
+
+        <div class="dashboard-content">
+            <!-- Sección de Reservaciones -->
+            <div id="reservationsSection" class="section">
+                <div id="tableReservation">
+                    <h3>Reservaciones</h3>
+                    <table id="reservationsTable">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Menú</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los registros de reservas se llenarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <div id="reservationFormContainer">
+                    <h3>Crear una Nueva Reserva</h3>
+                    <form id="reservationForm">
+                        <label for="menu">Selecciona un menú:</label>
+                        <select id="menu" name="menu"></select>
+
+                        <label for="date">Fecha:</label>
+                        <input type="date" id="date" name="date" required />
+
+                        <label for="time">Hora:</label>
+                        <input type="time" id="time" name="time" required />
+
+                        <label for="status">Estado:</label>
+                        <select id="status" name="status">
+                            <option value="true">Confirmada</option>
+                            <option value="false">Pendiente</option>
+                        </select>
+
+                        <button type="submit"><i class="fa-solid fa-plus"></i> Crear Reserva</button>
+                    </form>
+                    <button id="showMenuForm">Formulario de Menú</button>
+                </div>
+            </div>
+
+            <!-- Sección de Menús -->
+            <div id="menuSection" class="section hidden">
+                <div id="tableMenu">
+                    <h3>Menús</h3>
+                    <table id="menuTable">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Disponible</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los registros de menús se llenarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <div id="menuFormContainer">
+                    <h3>Crear un Nuevo Menú</h3>
+                    <form id="menuForm">
+                        <label for="name">Nombre del Menú:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="description">Descripción:</label>
+                        <textarea id="description" name="description" required></textarea>
+
+                        <label for="price">Precio:</label>
+                        <input type="number" id="price" name="price" min="0" step="0.01" required />
+
+                        <label for="available">¿Está Disponible?</label>
+                        <select id="available" name="available">
+                            <option value="true">Sí</option>
+                            <option value="false">No</option>
+                        </select>
+
+                        <button type="submit"><i class="fa-solid fa-plus"></i> Agregar Menú</button>
+                    </form>
+                    <button id="showReservationForm">Formulario de Reservas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/table.js"></script>
+</body>
+</html>

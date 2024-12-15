@@ -1,0 +1,209 @@
+﻿/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background: url('/img/snow.jpg');
+    color: #333;
+}
+
+/* Main Container */
+.reservationsAndMenuContainer {
+    width: 100%;
+    max-width: 1200px;
+    background: #fdfdfd; /* Beige/white */
+    padding: 40px;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 10px 20px rgba(173, 216, 230, 0.3); /* Light blue glow */
+}
+
+/* Titles */
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #5a8fd8; /* Blue pastel */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(173, 216, 230, 0.8); /* Light blue shadow */
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #6699cc; /* Muted blue */
+    margin-bottom: 15px;
+    text-align: left;
+    border-left: 5px solid #b3d9ff; /* Light blue border */
+    padding-left: 10px;
+}
+
+/* Flexbox for Content */
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Sections */
+.section {
+    flex: 1;
+    background-color: #f7f9fc; /* Light beige/white */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dfe7f1; /* Soft blue border */
+}
+
+/* Forms Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #dfe7f1; /* Soft blue border */
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #f9fcff; /* Light blue/white */
+}
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #5a8fd8; /* Blue pastel */
+        box-shadow: 0 0 5px rgba(90, 143, 216, 0.5);
+    }
+
+/* Buttons */
+button {
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #6699cc; /* Muted blue */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(102, 153, 204, 0.5);
+}
+
+    button:hover {
+        background-color: #5a8fd8; /* Pastel blue hover */
+        transform: scale(1.05);
+        box-shadow: 0px 6px 10px rgba(90, 143, 216, 0.6);
+    }
+
+    button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+.delete-btn {
+    background-color: #ff6961 !important;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9fcff; /* Light blue/white */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dfe7f1; /* Light blue border */
+}
+
+thead th {
+    background-color: #6699cc; /* Muted blue */
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tbody tr {
+    background-color: #f7f9fc; /* Light beige */
+    transition: background-color 0.2s;
+}
+
+    tbody tr:hover {
+        background-color: #edf3fa; /* Very light blue */
+    }
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f7fc; /* Light blue */
+    border: 1px solid #dfe7f1; /* Soft blue border */
+}
+
+    .alert.success {
+        background-color: #d9f3fa; /* Soft success blue */
+        color: #3b8ea5; /* Darker success blue */
+        border-left: 4px solid #5a8fd8;
+    }
+
+    .alert.error {
+        background-color: #fbe3e3; /* Soft error pink */
+        color: #d9534f;
+        border-left: 4px solid #d9534f;
+    }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Snow Animation */
+@keyframes snowfall {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

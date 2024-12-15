@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\img\\snow.jpg",
+      "PackagePath": "staticwebassets\\img\\snow.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\Natalia\\source\\repos\\ProyectoSDPP\\ComedorFrontend\\wwwroot\\js\\table.js",
+      "PackagePath": "staticwebassets\\js\\table.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ComedorFrontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ComedorFrontend.props",
+      "PackagePath": "build\\ComedorFrontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ComedorFrontend.props",
+      "PackagePath": "buildMultiTargeting\\ComedorFrontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ComedorFrontend.props",
+      "PackagePath": "buildTransitive\\ComedorFrontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
