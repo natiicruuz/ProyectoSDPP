@@ -63,12 +63,14 @@
 
             reservationsTable.innerHTML = reservations
                 .map((reservation) => {
-                    const formattedDate = new Date(reservation.date).toLocaleDateString();
-                    const formattedTime = new Date(reservation.date).toLocaleTimeString([], {
+                    const formattedDate = new Date(reservation.fechaReserva).toLocaleDateString();
+                    const formattedTime = new Date(reservation.fechaReserva).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
                     });
-                    const statusText = reservation.status ? "Confirmada" : "Pendiente";
+                    
+
+                    const statusText = reservation.estadoReserva ? "Confirmada" : "Pendiente";
                     const menuName = reservation.menu?.name || "Menú no disponible";
 
                     return `
@@ -103,9 +105,9 @@
 
         const formData = new FormData(reservationForm);
         const reservationData = {
-            date: `${formData.get("date")}T${formData.get("time")}:00`, // Combinar fecha y hora
+            fechaReserva: `${formData.get("date")}T${formData.get("time")}:00`, // Combinar fecha y hora
             menuId: formData.get("menu"),
-            status: formData.get("status") === "true",
+            estadoReserva: formData.get("status") === "true",
         };
 
         try {
@@ -180,8 +182,9 @@
             const reservation = await response.json();
 
             if (reservation) {
+                
                 // Cargar datos en el formulario
-                const date = new Date(reservation.date);
+                const date = new Date(reservation.fechaReserva);
                 reservationForm.date.value = date.toISOString().split("T")[0];
                 reservationForm.time.value = date.toISOString().split("T")[1].slice(0, 5);
                 reservationForm.menu.value = reservation.menuId;
