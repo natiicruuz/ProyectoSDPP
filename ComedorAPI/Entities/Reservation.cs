@@ -1,26 +1,15 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
-using System.ComponentModel.DataAnnotations;
 
-namespace ComedorAPI.Entities
+public class Reservation
 {
-    public class Reservation
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; set; }  // MongoDB _id
 
-        [Required]
-        [BsonRepresentation(BsonType.ObjectId)]
-        [BsonElement("menu")]
-        public string MenuId { get; set; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? MenuId { get; set; } // Referencia al _id del menú
 
-        [Required]
-        [BsonElement("fechaReserva")]
-        public DateTime FechaReserva { get; set; }
-
-        [BsonElement("estadoReserva")]
-        public bool EstadoReserva { get; set; }
-
-    }
+    public DateTime FechaReserva { get; set; }
+    public bool EstadoReserva { get; set; }
 }

@@ -1,4 +1,5 @@
 using ComedorAPI.Data;
+using ComedorAPI.Services;
 
 namespace ComedorAPI
 {
@@ -15,6 +16,7 @@ namespace ComedorAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<MongoDbService>();
+            builder.Services.AddSingleton<MenuService>();  // Registra MenuService
 
 
             // Habilitar CORS
