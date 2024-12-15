@@ -4,12 +4,17 @@
     const menuSelect = document.getElementById("menu");
     const reservationForm = document.getElementById("reservationForm");
     const menuForm = document.getElementById("menuForm");
+    const reservationDateInput = document.getElementById("date");
 
     const API_BASE_URL = "https://localhost:7095/api/Reservation";
     const API_MENU_URL = "https://localhost:7095/api/menu";
 
     let editingReservationId = null; // Para editar reservas
     let editingMenuId = null; // Para editar menús
+
+    // Establecer la fecha mínima como la fecha actual
+    const today = new Date().toISOString().split("T")[0];
+    reservationDateInput.setAttribute("min", today);
 
     async function loadMenus() {
         try {
