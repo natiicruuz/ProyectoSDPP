@@ -269,7 +269,7 @@
 
     // Inicializar eventos y cargar datos
     reservationForm.addEventListener("submit", handleAddOrUpdateReservation);
-    menuForm.addEventListener("submit", handleAddOrUpdateReservation);
+    menuForm.addEventListener("submit", handleAddOrUpdateMenu);
     loadMenus();
     loadReservations();
 });
