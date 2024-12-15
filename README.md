@@ -46,13 +46,16 @@ En este diagrama se identificaron las entidades relevantes al proyecto junto a s
 ### Diagrama de clases
 En este diagrama se representa de forma más detallada la estructura de las clases que compondrán el sistema, listando los atributos y relaciones asociadas de forma más específica.
 
+![Diagrama de clases](/docs/clases.svg)
 
 ### Diagrama de arquitectura
 Este diagrama ofrece una perspectiva clara de cómo evolucionan y cambian los estados internos en respuesta a una creación de una reserva y/o un menú.
 
+![Diagrama de clases](/docs/arquitectura.svg)
 
 ### Modelo de la aplicación 
 Este diagrama muestra el modelo de la aplicación con sus distintas clases y carpetas.
+![Diagrama de clases](/docs/modelo.svg)
 
 
 
